@@ -96,9 +96,9 @@ function drawBird(svg, height, width, margin) {
   appendCircle(birdG, Ix, Iy, width / height)
 
   // D
-  let Dy = getRandomArbitrary(By + bumper, height - margin.bottom)
+  let Dy = getRandomArbitrary(By + bumper, height+margin.bottom)
   let OBIntercept = getXIntercept(Dy, Ox, Oy, Bx, By)
-  let Dx = getRandomArbitrary(Math.max(Ox + bumper, OBIntercept), width - margin.right)
+  let Dx = getRandomArbitrary(Math.max(Ox + bumper, OBIntercept), width)
 
   drawTriangle(birdG, Ox, Oy, Cx, Cy, Dx, Dy, getRandomColor())
 
